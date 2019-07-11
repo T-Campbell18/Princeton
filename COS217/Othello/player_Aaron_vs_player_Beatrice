@@ -1,0 +1,15 @@
+Initial game state:
+FIRST = x, SECOND = o
+
+  A B C D E F G H
+0 . . . . . . . .
+1 . . . . . . . .
+2 . . . . . . . .
+3 . . . o x . . .
+4 . . . x o . . .
+5 . . . . . . . .
+6 . . . . . . . .
+7 . . . . . . . .
+FIRST (player_Aaron) vs SECOND (player_Beatrice)
+	DRAW
+	Score 0

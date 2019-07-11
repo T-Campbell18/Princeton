@@ -1,0 +1,13 @@
+unnamed-chunk-1	library	DAAG	f.vic.earconch	possum	sex	Pop	earconch	hist	xseq	seq	min	max	lines	dnorm	mean	sd	qqnorm	qqline
+unnamed-chunk-2	set.seed	mat	matrix	sample	f.vic.earconch	length	T	mean_pop.deviation	apply	mean	dev	quantile	c	hist	F
+unnamed-chunk-3	age.dist	c	names	jurors
+unnamed-chunk-4	recreate	rep	c	table	jurors	t.test	p.value
+unnamed-chunk-5	t.test	recreate	conf.int
+unnamed-chunk-6	ob	c	table	jurors	ex	age.dist	x2	sum	pchisq	length	chisq.test	p.value
+unnamed-chunk-7	qchisq
+unnamed-chunk-8	calc	rep	c	no.calc	school	matrix	t.test
+unnamed-chunk-9	library	openintro	dplyr
+unnamed-chunk-10	gender.mstatus	select	census	sex	maritalStatus	t	table	length
+unnamed-chunk-11	gender.mstatus	maritalStatus	factor	ct	table	sex
+unnamed-chunk-12	chisq.test	ct
+unnamed-chunk-13	

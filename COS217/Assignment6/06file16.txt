@@ -1,0 +1,195 @@
+
+
+Princeton University
+Computer Science Department
+
+Computer Science 217
+Introduction to Programming Systems
+
+Aarti Gupta
+
+Spring 2017
+
+Directory
+General Information | Schedule | Assignments | Announcements | Policies
+Lectures
+
+We encourage you to attend the lectures. We also encourage you to participate actively in the lectures by listening attentively and expressively, asking helpful questions occasionally, answering questions occasionally, and so forth. Your lecture attendance and participation are important to your success in the course. They also are important to the success of the course as a whole, and so will be components of your subjective grade.
+
+Some of the material covered in lectures is not covered in the textbooks or precepts. Some exam questions may reward your lecture attendance.
+
+Precepts
+
+We encourage you to attend the precepts. We also encourage you to participate actively in the precepts by listening attentively and expressively, asking helpful questions occasionally, answering questions occasionally, and so forth. Your precept attendance and participation are important to your success in the course. They also are important to the success of the course as a whole, and so will be components of your subjective grade.
+
+Some of the material covered in precepts is not covered in the textbooks or lectures.
+
+You should attend your precept, that is, the precept for which you are registered in Princeton's TigerHub system.
+
+Concerning attending another precept instead of your precept:
+
+Generally it is not acceptable to attend another precept instead of your precept. Your subjective grade will suffer if you do not participate in your precept. However, it is acceptable to attend another precept instead of your precept occasionally if a conflict with your precept arises. (Indeed you should do so.) In that case, as soon as you become aware of the conflict, send e-mail to your preceptor and the other preceptor. The other preceptor thereby will know to duplicate handouts for you, make sure you have a seat, etc. Note that this mechanism is intended to address occasional conflicts; it does not provide license to attend precepts other than your precept on a regular basis.
+
+Concerning attending another precept in addition to your precept:
+
+Generally it is not acceptable to attend another precept in addition to your precept. After all, if even a small fraction of the course's students did that routinely, then some precepts would be very large (or even overflow) routinely. Precepts containing a large number of students are less effective than those containing a small number. However, it could be acceptable to attend another precept in addition to your own occasionally. In that case, send e-mail to your preceptor and the other preceptor the day before the precept, asking permission to attend. The preceptors then will make the decision. If the decision is "yes," then the other preceptor will duplicate handouts for you, make sure you have a seat, etc.
+
+Electronic Communication
+
+These are the course's policies concerning electronic communication:
+
+If you have a question that you can express without revealing any of your assignment solution, then you may post it to the course's Piazza account. One of the course's instructors will respond as soon as possible. Other students also are welcome to respond if and only if they can do so without revealing any of their assignment solutions.
+
+If you have a question that you cannot express without revealing any of your assignment solution, then you may not post it to Piazza. Instead you may e-mail it to your preceptor. See the course's General Information web page for the e-mail address of your preceptor.
+
+If your preceptor does not answer your e-mailed question in a reasonable amount of time, then you may e-mail your question to all of the course's instructors at cos217instructors@lists.cs.princeton.edu. Any e-mail sent to that address will be received only by the course's preceptors, not by students. One of the course's preceptors will answer your question as soon as possible. You may not e-mail questions directly to a preceptor other than your own.
+
+In the context of electronic communication, the phrase "any of your assignment solution" includes:
+
+The products that you create for the assignment, that is, your source code files (including comments), DFA files, Makefiles, readme files, etc. You may not show any of the products that you create for the assignment, modified versions of them, or any parts of them, on Piazza.
+
+Descriptions of those products in the form of pseudo-code, flow charts, outlines, diagrams, natural language prose, etc. You may not describe the products that you create for the assignment, or any parts of them, on Piazza.
+
+Design decisions that you make in the process of creating those products, that is, your decisions about how to express your program as files, your files as functions, your functions as statements, etc. You may not describe your design decisions or suggest design decisions on Piazza.
+
+Assignment Conduct
+
+The policies described in this section supplement University academic regulations. This course has course policies that go beyond University policies on academic conduct. Princeton's Rights, Rules, Responsibilities handbook asserts:
+
+The only adequate defense for a student accused of an academic violation is that the work in question does not, in fact, constitute a violation. Neither the defense that the student was ignorant of the regulations concerning academic violations nor the defense that the student was under pressure at the time the violation was committed is considered an adequate defense.
+If the course staff suspects that you have violated course policies concerning assignment conduct, then the course staff will make an appropriate determination and apply a penalty. The default penalty is an F in the course. Additionally, if the course staff determines that you may have violated University policies, you will also be referred to the Committee on Discipline, Honor Committee, or other relevant body. These bodies may impose additional penalties. Note that it is possible to violate the course policy without violating University policies. In simpler terms, it is possible to cheat without plagiarizing. In those cases, the ruling on University policy does not override any penalty for course policy violation.
+
+This course takes policy violations seriously, and so does the University. According to the University document "Academic Integrity at Princeton", plagiarism can occur when as few as three words are used without citation (see http://www.princeton.edu/pr/pub/integrity/pages/plagiarism/).
+
+If you have any questions about these matters, please consult a course staff member.
+
+Concerning receiving help:
+
+In short: To help you compose an assignment solution you may use only the authorized sources of information that are listed below, may consult with other people only via the course's Piazza account or via interactions that might legitimately (see explanation below) appear on the course's Piazza account, and must declare your sources in your readme file for the assignment. Using impermissible sources is a violation of course policy. Failure to cite sources is also a violation of University policy. While citing an impermissible source may avoid plagiarism, it does not avoid the restrictions imposed by course policy.
+
+To help you compose your assignment solutions you may use:
+
+The course's lectures.
+
+The course's precepts.
+
+The course's website.
+
+Documents that are referenced directly by the course's website. Such documents include the course's lecture slides and precept handouts.
+
+The course's textbooks.
+
+The man pages on the CourseLab cluster.
+
+The course's current staff members outside of class time through office hours.
+
+The course's current staff members outside of class time through meetings.
+
+The course's current staff members outside of class time through Piazza.
+
+The course's current staff members outside of class time through e-mail.
+
+Current lab teaching assistants through visits to the course labs.
+
+To help you compose your assignment solutions you may use only the sources of information listed above. For example, you may not use:
+
+Anyone other than current course staff members or current lab teaching assistants.
+
+Any student who currently is taking the course or who took the course in a prior semester, in any form (verbally, computer files, e-mail messages, pencil/pen on paper, marker on white board, chalk on black board, etc.) at any level of detail (code, pseudo-code, flow charts, outlines, diagrams, natural language prose, etc.) at any time (before or while working on your assignment solution).
+
+Assignment solutions (regardless of completeness or correctness) provided by any student who currently is taking the course, provided by any student who took the course in a prior semester, or retrieved from the web. Even glancing momentarily at an assignment solution other than own your beyond the period of time required to recognize that it is related to assignment the is a violation of course policies.
+
+There are three exceptions to those policies:
+
+You may consult with students who currently are taking the course via the course's Piazza account. The section of this web page entitled "Electronic Communication" provides details concerning the proper use of the course's Piazza account.
+
+You may consult with other students who are taking the course if and only if your interactions might legitimately appear on the course's Piazza account. The word "legitimately" here should be taken to mean that your help is qualitatively and quantitatively similar to messages that have remained posted to Piazza. Occasionally, students will post impermissible questions, comments, or responses on Piazza, and the course staff will delete these. Only the posts that remain should be taken as guidelines when providing help to another student. When in doubt, for your sake and the sake of the other student, use Piazza.
+
+You may consult with other people (former COS 217 students, friends and family who have not taken COS 217, etc.) if and only if your interactions might legitimately appear on the course's Piazza account, using the same explanation of "legitimate" as given above. In that case it is your responsibility to make sure the person who is helping you knows the pertinent course policies and does not violate them. When in doubt, simply don't consult with other people.
+
+Examining and/or copying someone else's code is an egregious violation of course policies and perhaps University policy. Copying and transforming someone else's code (by rearranging independent code, renaming variables, rewording comments, etc.) is just as egregious. Some inexperienced programmers have the misconception that detecting such violations is difficult; actually it is quite easy. Not only do such violations quickly identify themselves during the grading process, but also we can (and do) use software packages, such as Alex Aiken's renowned MOSS software, for automated help.
+
+There is one exception to that code-copying-and-transforming policy. You may adapt code from the course materials provided that you explain what code you use, and cite its source in your readme file.
+
+For each assignment you must declare, in your readme file, the authorized sources of information that you used to compose your assignment solution.
+
+For each assignment you also must declare in your readme file the unauthorized sources of information and help that you used to compose your assignment solution and explain in detail any violation of course policy and University policy. The course policy penalty for course policy violations will depend on the level of clarity in such explanations. Declaring in your readme that you "got help from a friend" is clearly less detailed than "copied the majority of the assignment from so-and-so" (with the name provided). Writing something similar to the former example is neither an appropriately clear declaration of course policy violations nor a proper citation, so it is likely a violation of both course policy and University policy. Using an unauthorized source will result in default penalty of an F in the course, but may result in a penalty as lenient as a 0 grade for the assignment if the citation and explanation in the readme file is deemed sufficiently clear by the instructor. In the event that you violate course policy and/or University policy, the penalties for the course and University may depend on separate criteria and may not be directly correlated with each other.
+
+Concerning providing help:
+
+In short: You may help other students with assignments only via the course's Piazza account or interactions that might legitimately appear on the course's Piazza account, and you may not share your assignment solutions with anyone, ever, in any form.
+
+You may not provide assignment-related help to another student in any form (verbally, computer files, e-mail messages, pencil/pen on paper, marker on white board, chalk on black board, etc.) at any level of detail (code, pseudo-code, flow charts, outlines, diagrams, natural language prose, etc.) at any time (before or while the student works on the assignment solution). That policy holds even after the due date/time of the assignment, and even after the course is finished. That is, you may not provide assignment-related help to students who take the course in future semesters.
+
+There are three exceptions to those policies:
+
+While you are taking the course, you may provide assignment-related help to other current students via the course's Piazza account. The section of this web page entitled "Electronic Communication" provides details concerning the proper use of the course's Piazza account.
+
+While you are taking the course, you may provide assignment-related help to current students if and only if your interactions might legitimately appear on the course's Piazza account. When in doubt, for your sake and the sake of the other student, insist on using Piazza.
+
+After completing the course, you may provide assignment-related help to current students if and only if your interactions might legitimately appear on the course's Piazza account using the explanation of "legitimately" provided above. When in doubt, for your sake and the sake of the other student, simply refuse to help.
+
+Sharing your assignment-related code/comments with another student is an especially egregious violation of course policies. Sharing your code/comments in digital form is even more egregious. Do not give hard copy of your work to anyone. Do not e-mail your work to anyone. Do not make your work available to anyone via the web.
+
+Store all of your assignment-related work in the CS CourseLab file system in a private directory. You can create a private directory in the CS CourseLab file system by issuing commands similar to these on a CS CourseLab computer:
+
+$ mkdir cos217
+$ chmod 700 cos217
+If you also store your assignment-related work on your personal computer, then make sure your personal computer is password protected, and that you enable the password protection whenever you leave your computer unattended. If you store your assignment-related work on a personal external hard drive, then make sure your personal hard drive is password protected or locked in a secure place. If you are working on a public cluster computer, then do not leave the computer unattended, and delete your local files and logout before leaving.
+
+Remember that you are responsible for keeping your assignment-related work away from prying eyes. If someone else copies your work, we have no way of knowing the circumstances. In that case we will refer the matter to the Committee on Discipline, and the Committee will investigate.
+
+Concerning retaking COS 217:
+
+If you took COS 217 (or part of it) during a previous semester, then you may use your work on assignments from that previous semester. However you may not use:
+
+Feedback that your grader gave you on your work on assignments from a previous semester. For example, you may not look at your old grade reports.
+
+Your work on an assignment from a previous semester if you worked with a partner on that assignment during the previous semester.
+
+Your work on an assignment from a previous semester if you are working with a partner on that assignment during this semester.
+
+Your work on an assignment from a previous semester if you violated course policies or University policies on that assignment, as determined by the course's instructors or the Committee on Discipline.
+
+Exam Conduct
+
+Conduct during in-class exams is covered by the University Honor Code. If we suspect a student of inappropriate conduct during an in-class exam, then we will refer the case to the Honor Committee. If the Honor Committee finds the student guilty of inappropriate conduct, then the standard penalty is automatic failure of the COS 217 course. The Honor Committee may impose additional penalties.
+
+Assignment Late Submission
+
+You should submit your work on an assignment (electronically) before its due time. If you submit your work late, we will give you credit for it on this scale:
+
+95% for work submitted up to 3 hours late,
+90% for work submitted up to 6 hours late,
+85% for work submitted up to 12 hours late,
+75% for work submitted up to 24 hours late,
+50% for work submitted up to 48 hours late,
+0% for work submitted more than 48 hours late.
+If an assignment consists of multiple files, then we will consider the date/time of submission of your work as a whole to be the same as the date/time of submission of the last file that you submit.
+
+We will grant extensions only in the case of illness (with a doctor's note) or extraordinary circumstances. If illness or extraordinary circumstances will cause you to submit an assignment late, then you should discuss the matter with your preceptor as soon as possible. Please plan your work on the assignments so that travel, religious holidays, etc. do not cause you to submit it late. Heavy workload is not an extraordinary circumstance.
+
+You have one "late pass" that allows you to submit any one assignment up to three days late without penalty. You can apply your late pass to at most one assignment; you cannot split your late pass across multiple assignments. If you wish to use your late pass on an assignment, then you must tell your preceptor via e-mail before the assignment's due date/time.
+
+Some of the assignments involve working in a team with another student from your precept. You may use your late pass on a team assignment if and only if your teammate uses his/her late pass on that assignment. (The implication is that you may not use your late pass on a team assignment if your teammate already has used his/her late pass.) If you wish to use your late pass on a team assignment, you and your teammate must tell your preceptor via e-mail before the assignment's due date/time.
+
+The final assignment is due at 5:00PM on the Dean's Date, as is customary at Princeton University. You may submit the final assignment until 11:59PM on the Dean's Date; in that case the appropriate lateness penalty will be applied. You may use your late pass on the final assignment, but doing so extends the assignment due date/time only from 5:00PM on the Dean's Date to 11:59PM on the Dean's Date. You may not submit your work on the final assignment, or any assignment, after 11:59PM on the Dean's Date without permission from the appropriate Dean and the COS 217 instructor-of-record.
+
+Grading
+
+Your final grade will be weighted as follows:
+
+Component  Approximate Weight
+Assignments            50%
+(the final assignment counts double)
+Midterm Exam          15%
+Final Exam            25%
+Subjective            10%
+To determine your subjective grade we will consider the extent to which your involvement in the course positively affected the course as a whole. Did you attend and participate actively in lectures and precepts? Did you participate effectively on Piazza by asking helpful questions or providing helpful answers? If you can answer "yes" to those questions, then you have made the course a better experience for other students, for the instructors, and for yourself.
+
+Conversely, we also will consider the extent to which your involvement in the course negatively affected the course as a whole. Did you miss lectures or precepts frequently? Did you attend the wrong precept (without prior approval) frequently? Were you often distracted during lectures or precepts, or were you a source of distraction for others? Did you frequently send messages to Piazza that are inappropriate, asking questions that were answered previously on Piazza, or asking questions that are answered in the required readings? If you must answer "yes" to any of those questions, then you have negatively affected the course for all concerned.
+
+Waivers
+
+The only person who can grant deviations from the above-stated policies is the professor in charge of the course, and such waivers will only be granted via e-mail or written communication. No other waiver from other sources can modify these policies. It is the student's responsibility to adhere to the policies, and to ignore any implied or explicit waiver from any unauthorized source. For example, if the student asks a preceptor, Lab TA, or friend if something is permissible, any response that deviates from course policy can not be used to justify any action that is contrary to course policy.
+

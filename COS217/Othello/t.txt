@@ -1,0 +1,9 @@
+	A B C D E F G H
+0  o o o o o o o o
+1  x x o x x x x .
+2  o x o x x x o o
+3  o x o x x o o o
+4  o x x x x o . o
+5  o x x x x o o o
+6  o x x x x x . o
+7  x x x x x . o o

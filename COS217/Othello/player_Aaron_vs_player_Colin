@@ -1,0 +1,917 @@
+
+Initial game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . . . . . .
+1  . . . . . . . .
+2  . . . . . . . .
+3  . . . o x . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #0 (by FIRST player):  D2
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . . . . . .
+1  . . . . . . . .
+2  . . . x . . . .
+3  . . . x x . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #1 (by SECOND player):  C2
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . . . . . .
+1  . . . . . . . .
+2  . . o x . . . .
+3  . . . o x . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #2 (by FIRST player):  B2
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . . . . . .
+1  . . . . . . . .
+2  . x x x . . . .
+3  . . . o x . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #3 (by SECOND player):  D1
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . . . . . .
+1  . . . o . . . .
+2  . x x o . . . .
+3  . . . o x . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #4 (by FIRST player):  D0
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . x . . . .
+1  . . . x . . . .
+2  . x x x . . . .
+3  . . . x x . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #5 (by SECOND player):  E2
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . x . . . .
+1  . . . x . . . .
+2  . x x x o . . .
+3  . . . x o . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #6 (by FIRST player):  F2
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . x . . . .
+1  . . . x . . . .
+2  . x x x x x . .
+3  . . . x x . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #7 (by SECOND player):  E1
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . x . . . .
+1  . . . x o . . .
+2  . x x x o x . .
+3  . . . x o . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #8 (by FIRST player):  F1
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . x . . . .
+1  . . . x x x . .
+2  . x x x x x . .
+3  . . . x o . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #9 (by SECOND player):  E0
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . x o . . .
+1  . . . x o x . .
+2  . x x x o x . .
+3  . . . x o . . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #10 (by FIRST player):  F3
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . . x o . . .
+1  . . . x o x . .
+2  . x x x x x . .
+3  . . . x x x . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #11 (by SECOND player):  C0
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o . . .
+1  . . . x o x . .
+2  . x x x x x . .
+3  . . . x x x . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #12 (by FIRST player):  F0
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o x . .
+1  . . . x x x . .
+2  . x x x x x . .
+3  . . . x x x . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #13 (by SECOND player):  G0
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . . x x x . .
+2  . x x x x x . .
+3  . . . x x x . .
+4  . . . x o . . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #14 (by FIRST player):  F4
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . . x x x . .
+2  . x x x x x . .
+3  . . . x x x . .
+4  . . . x x x . .
+5  . . . . . . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #15 (by SECOND player):  E5
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . . x o x . .
+2  . x x x o x . .
+3  . . . x o x . .
+4  . . . x o x . .
+5  . . . . o . . .
+6  . . . . . . . .
+7  . . . . . . . .
+
+Move #16 (by FIRST player):  D6
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . . x o x . .
+2  . x x x o x . .
+3  . . . x o x . .
+4  . . . x o x . .
+5  . . . . x . . .
+6  . . . x . . . .
+7  . . . . . . . .
+
+Move #17 (by SECOND player):  A2
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . . x o x . .
+2  o o o o o x . .
+3  . . . x o x . .
+4  . . . x o x . .
+5  . . . . x . . .
+6  . . . x . . . .
+7  . . . . . . . .
+
+Move #18 (by FIRST player):  C1
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . x x o x . .
+2  o o o x o x . .
+3  . . . x x x . .
+4  . . . x o x . .
+5  . . . . x . . .
+6  . . . x . . . .
+7  . . . . . . . .
+
+Move #19 (by SECOND player):  D5
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . x o o x . .
+2  o o o o o x . .
+3  . . . o x x . .
+4  . . . o o x . .
+5  . . . o x . . .
+6  . . . x . . . .
+7  . . . . . . . .
+
+Move #20 (by FIRST player):  C3
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . x o o x . .
+2  o o x o o x . .
+3  . . x x x x . .
+4  . . . x o x . .
+5  . . . o x . . .
+6  . . . x . . . .
+7  . . . . . . . .
+
+Move #21 (by SECOND player):  C4
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . o o o x . .
+2  o o o o o x . .
+3  . . o o x x . .
+4  . . o o o x . .
+5  . . . o x . . .
+6  . . . x . . . .
+7  . . . . . . . .
+
+Move #22 (by FIRST player):  C5
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . o o o x . .
+2  o o o o o x . .
+3  . . o o x x . .
+4  . . o x o x . .
+5  . . x x x . . .
+6  . . . x . . . .
+7  . . . . . . . .
+
+Move #23 (by SECOND player):  F5
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . o o o o . .
+2  o o o o o o . .
+3  . . o o x o . .
+4  . . o x o o . .
+5  . . x x x o . .
+6  . . . x . . . .
+7  . . . . . . . .
+
+Move #24 (by FIRST player):  G1
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . o o o o x .
+2  o o o o o x . .
+3  . . o o x o . .
+4  . . o x o o . .
+5  . . x x x o . .
+6  . . . x . . . .
+7  . . . . . . . .
+
+Move #25 (by SECOND player):  D7
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . . o o o o x .
+2  o o o o o x . .
+3  . . o o x o . .
+4  . . o o o o . .
+5  . . x o x o . .
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #26 (by FIRST player):  B1
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o .
+1  . x x x x x x .
+2  o o o o o x . .
+3  . . o o x o . .
+4  . . o o o o . .
+5  . . x o x o . .
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #27 (by SECOND player):  H0
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x x o .
+2  o o o o o o . .
+3  . . o o o o . .
+4  . . o o o o . .
+5  . . x o x o . .
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #28 (by FIRST player):  G5
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x x o .
+2  o o o x o o . .
+3  . . o o x o . .
+4  . . o o o x . .
+5  . . x o x x x .
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #29 (by SECOND player):  H5
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x x o .
+2  o o o x o o . .
+3  . . o o x o . .
+4  . . o o o x . .
+5  . . x o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #30 (by FIRST player):  B4
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x x o .
+2  o o o x o o . .
+3  . . x o x o . .
+4  . x x x x x . .
+5  . . x o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #31 (by SECOND player):  A3
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x x o .
+2  o o o x o o . .
+3  o . x o x o . .
+4  . o x x x x . .
+5  . . o o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #32 (by FIRST player):  H1
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x x x x
+2  o o o x o o . .
+3  o . x o x o . .
+4  . o x x x x . .
+5  . . o o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #33 (by SECOND player):  H2
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x x o o
+2  o o o x o o . o
+3  o . x o x o . .
+4  . o x x x x . .
+5  . . o o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #34 (by FIRST player):  G2
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x x o o
+2  o o o x x x x o
+3  o . x o x x . .
+4  . o x x x x . .
+5  . . o o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #35 (by SECOND player):  H3
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x o o o
+2  o o o x x x o o
+3  o . x o x x . o
+4  . o x x x x . .
+5  . . o o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #36 (by FIRST player):  A5
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x x o o o
+2  o o o x x x o o
+3  o . x o x x . o
+4  . x x x x x . .
+5  x . o o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #37 (by SECOND player):  G3
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x o o o o
+2  o o o x x o o o
+3  o . x o o o o o
+4  . x x x x o . .
+5  x . o o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #38 (by FIRST player):  G4
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x o o o o
+2  o o o x x o o o
+3  o . x o o x o o
+4  . x x x x x x .
+5  x . o o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #39 (by SECOND player):  B3
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x o o o o
+2  o o o x x o o o
+3  o o o o o x o o
+4  . x o x x x x .
+5  x . o o o o o o
+6  . . . o . . . .
+7  . . . o . . . .
+
+Move #40 (by FIRST player):  C6
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x x x o o o o
+2  o o x x x o o o
+3  o o x o o x o o
+4  . x x x x x x .
+5  x . x x o o o o
+6  . . x o . . . .
+7  . . . o . . . .
+
+Move #41 (by SECOND player):  C7
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x o x o o o o
+2  o o o x x o o o
+3  o o o o o x o o
+4  . x o x x x x .
+5  x . o x o o o o
+6  . . o o . . . .
+7  . . o o . . . .
+
+Move #42 (by FIRST player):  B5
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x o x o o o o
+2  o o o x x o o o
+3  o o o x o x o o
+4  . x x x x x x .
+5  x x x x o o o o
+6  . . o o . . . .
+7  . . o o . . . .
+
+Move #43 (by SECOND player):  B6
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x o x o o o o
+2  o o o x x o o o
+3  o o o x o x o o
+4  . o x o x x x .
+5  x o o x o o o o
+6  . o o o . . . .
+7  . . o o . . . .
+
+Move #44 (by FIRST player):  B7
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x o x o o o o
+2  o x o x x o o o
+3  o x o x o x o o
+4  . x x o x x x .
+5  x x o x o o o o
+6  . x x o . . . .
+7  . x o o . . . .
+
+Move #45 (by SECOND player):  A7
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x o x o o o o
+2  o x o x x o o o
+3  o x o x o x o o
+4  . x x o x x x .
+5  x x o x o o o o
+6  . o x o . . . .
+7  o o o o . . . .
+
+Move #46 (by FIRST player):  F6
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  . . o o o o o o
+1  . x o x o o o o
+2  o x o x x o o o
+3  o x x x o x o o
+4  . x x x x x x .
+5  x x o x x x o o
+6  . o x o . x . .
+7  o o o o . . . .
+
+Move #47 (by SECOND player):  A0
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o . o o o o o o
+1  . o o x o o o o
+2  o x o x x o o o
+3  o x x x o x o o
+4  . x x x x x x .
+5  x x o x x x o o
+6  . o x o . x . .
+7  o o o o . . . .
+
+Move #48 (by FIRST player):  A1
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o . o o o o o o
+1  x x x x o o o o
+2  o x o x x o o o
+3  o x x x o x o o
+4  . x x x x x x .
+5  x x o x x x o o
+6  . o x o . x . .
+7  o o o o . . . .
+
+Move #49 (by SECOND player):  A4
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o . o o o o o o
+1  x x x x o o o o
+2  o x o x x o o o
+3  o o x x o x o o
+4  o x x x x x x .
+5  x o o x x x o o
+6  . o o o . x . .
+7  o o o o . . . .
+
+Move #50 (by FIRST player):  H4
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o . o o o o o o
+1  x x x x o o o o
+2  o x o x x o o o
+3  o o x x o x o o
+4  o x x x x x x x
+5  x o o x x x x o
+6  . o o o . x . .
+7  o o o o . . . .
+
+Move #51 (by SECOND player):  A6
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o . o o o o o o
+1  x x x x o o o o
+2  o x o x x o o o
+3  o o x x o x o o
+4  o x x x x x x x
+5  o o o x x x x o
+6  o o o o . x . .
+7  o o o o . . . .
+
+Move #52 (by FIRST player):  E7
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o . o o o o o o
+1  x x x x o o o o
+2  o x o x x o o o
+3  o o x x o x o o
+4  o x x x x x x x
+5  o o x x x x x o
+6  o o o x . x . .
+7  o o o o x . . .
+
+Move #53 (by SECOND player):  B0
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o o o o o o o o
+1  x o o x o o o o
+2  o o o o x o o o
+3  o o x x o x o o
+4  o x x x x x x x
+5  o o x x x x x o
+6  o o o x . x . .
+7  o o o o x . . .
+
+Move #54 (by FIRST player):  H6
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o o o o o o o o
+1  x o o x o o o o
+2  o o o o x o o o
+3  o o x x o x o o
+4  o x x x x x x x
+5  o o x x x x x x
+6  o o o x . x . x
+7  o o o o x . . .
+
+Move #55 (by SECOND player):  G6
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o o o o o o o o
+1  x o o x o o o o
+2  o o o o x o o o
+3  o o x o o x o o
+4  o x x x o x o x
+5  o o x x x o o x
+6  o o o x . x o x
+7  o o o o x . . .
+
+Move #56 (by FIRST player):  F7
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o o o o o o o o
+1  x o o x o o o o
+2  o o o o x o o o
+3  o o x o o x o o
+4  o x x x o x o x
+5  o o x x x o o x
+6  o o o x . x x x
+7  o o o o x x . .
+
+Move #57 (by SECOND player):  E6
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o o o o o o o o
+1  x o o x o o o o
+2  o o o o x o o o
+3  o o x o o x o o
+4  o x o x o x o x
+5  o o x o o o o x
+6  o o o o o x x x
+7  o o o o x x . .
+
+Move #58 (by SECOND player):  G7
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o o o o o o o o
+1  x o o x o o o o
+2  o o o o x o o o
+3  o o x o o x o o
+4  o x o x o x o x
+5  o o x o o o o x
+6  o o o o o o o x
+7  o o o o o o o .
+
+Move #59 (by SECOND player):  H7
+
+Current game state:
+FIRST = x, SECOND = o
+
+   A B C D E F G H
+0  o o o o o o o o
+1  x o o x o o o o
+2  o o o o x o o o
+3  o o x o o x o o
+4  o x o x o x o o
+5  o o x o o o o o
+6  o o o o o o o o
+7  o o o o o o o o
+FIRST (player_Aaron) vs SECOND (player_Colin)
+   Winner SECOND player_Colin
+   Score -46
+   

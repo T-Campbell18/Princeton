@@ -1,0 +1,250 @@
+/*--------------------------------------------------------------------*/
+/* memorymap                                                          */
+/* Author: Tyler Campbell and Lauren Johnston                         */
+/*--------------------------------------------------------------------*/
+
+TEXT
+
+Function setup
+0x400dee <readString>:	push   %r12
+0x400df0 <readString+2>:	push   %rbp
+0x400df1 <readString+3>:	push   %rbx
+0x400df2 <readString+4>:	sub    $0x30,%rsp
+0x400df6 <readString+8>:	mov    %rdi,%r12
+
+First loop
+0x400df9 <readString+11>:	mov    $0x0,%ebx
+0x400dfe <readString+16>:	mov    %ebx,%ebp
+0x400e00 <readString+18>:	mov    0x2b7971(%rip),%rdi # 0x6b8778 <stdin>
+0x400e07 <readString+25>:	callq  0x401eb0 <getc>
+0x400e0c <readString+30>:	cmp    $0xa,%eax
+0x400e0f <readString+33>:	je     0x400e1f <readString+49>
+0x400e11 <readString+35>:	cmp    $0xffffffff,%eax
+0x400e14 <readString+38>:	je     0x400e1f <readString+49>
+0x400e16 <readString+40>:	mov    %al,(%rsp,%rbx,1)
+0x400e19 <readString+43>:	add    $0x1,%rbx
+0x400e1d <readString+47>:	jmp    0x400dfe <readString+16>
+
+buf[i] = '\0'
+0x400e1f <readString+49>:	movslq %ebp,%rbp
+0x400e22 <readString+52>:	movb   $0x0,(%rsp,%rbp,1)
+
+Second loop setup
+0x400e26 <readString+56>:	mov    $0x0,%eax
+
+Second loop
+0x400e2b <readString+61>:	movzbl (%rsp,%rax,1),%edx
+0x400e2f <readString+65>:	mov    %dl,(%r12,%rax,1)
+0x400e33 <readString+69>:	add    $0x1,%rax
+0x400e37 <readString+73>:	cmp    $0x30,%rax
+0x400e3b <readString+77>:	jne    0x400e2b <readString+61>
+
+Cleanup and return
+0x400e3d <readString+79>:	add    $0x30,%rsp
+0x400e41 <readString+83>:	pop    %rbx
+0x400e42 <readString+84>:	pop    %rbp
+0x400e43 <readString+85>:	pop    %r12
+0x400e45 <readString+87>:	retq
+
+Function setup
+0x400e46 <main>:	sub    $0x8,%rsp
+0x400e4a <main+4>:	mov    $0x6bb120,%edi
+0x400e4f <main+9>:	and    $0xfffffffffffff000,%rdi
+0x400e56 <main+16>:	mov    $0x7,%edx
+0x400e5b <main+21>:	mov    $0x1,%esi
+
+mprotect(...)
+0x400e60 <main+26>:	callq  0x4193b0 <mprotect>
+
+printf("What is your name?\n")
+0x400e65 <main+31>:	mov    $0x48fb90,%edi
+0x400e6a <main+36>:	callq  0x401cd0 <puts>
+
+readString(name)
+0x400e6f <main+41>:	mov    $0x6bb120,%edi
+0x400e74 <main+46>:	callq  0x400dee <readString>
+
+if strcmp(name, "Andrew Appel") != 0 skip over the assignment to grade
+0x400e79 <main+51>:	mov    $0x6bb120,%esi
+0x400e7e <main+56>:	mov    $0x48fba3,%edi
+0x400e83 <main+61>:	mov    $0xd,%ecx
+0x400e88 <main+66>:	repz cmpsb %es:(%rdi),%ds:(%rsi)
+0x400e8a <main+68>:	seta   %dl
+0x400e8d <main+71>:	setb   %al
+0x400e90 <main+74>:	cmp    %al,%dl
+0x400e92 <main+76>:	jne    0x400e9b <main+85>
+
+grade = 'B'
+0x400e94 <main+78>:	movb   $0x42,0x2b71e9(%rip)        # 0x6b8084 <grade>
+
+printf("%c is your grade.\n", grade)
+0x400e9b <main+85>:	movsbl 0x2b71e2(%rip),%esi        # 0x6b8084 <grade>
+0x400ea2 <main+92>:	mov    $0x48fbb0,%edi
+0x400ea7 <main+97>:	mov    $0x0,%eax
+0x400eac <main+102>:	callq  0x401c30 <printf>
+
+printf("Thank you, %s.\n", name)
+0x400eb1 <main+107>:	mov    $0x6bb120,%esi
+0x400eb6 <main+112>:	mov    $0x48fbc3,%edi
+0x400ebb <main+117>:	mov    $0x0,%eax
+0x400ec0 <main+122>:	callq  0x401c30 <printf>
+
+Cleanup and return 0
+0x400ec5 <main+127>:	mov    $0x0,%eax
+0x400eca <main+132>:	add    $0x8,%rsp
+0x400ece <main+136>:	retq
+
+
+-----------------------------------------------------------------------
+DATA
+
+Address (hex)		Contents(hex)		Description
+
+0x6b8084				0x44						Location of grade variable. Its value is
+																0x44 = 'D' in ASCII initially.
+																	
+-----------------------------------------------------------------------
+BSS
+
+Address (hex)		Contents(hex)		Description
+
+0x6bb120 				0x54						'T'
+0x6bb121				0x79						'y'
+0x6bb122 				0x6c						'l'
+0x6bb123 				0x65						'e'
+0x6bb124 				0x72						'r'
+0x6bb125 				0x20						' '
+0x6bb126 	      0x26            '&'
+0x6bb127 				0x20						' '
+0x6bb128 				0x4c						'L'
+0x6bb129 				0x61						'a'
+0x6bb12a 				0x75						'u'
+0x6bb12b  			0x72   					'r'
+0x6bb12c 				0x65						'e'
+0x6bb12d 				0x6e						'n'
+0x6bb12e 				0x00            \0
+0x6bb12f 				0xc6						opdcode for mov 'A' to &grade
+0x6bb130				0x04            ...
+0x6bb131				0x25						...	
+0x6bb132				0x84						...
+0x6bb133				0x80						...
+0x6bb134				0x6b						...	
+0x6bb135				0x00						...
+0x6bb136				0x41						...
+0x6bb137				0xe9						opcode for jmp to main + offset line
+0x6bb138				0x59						...
+0x6bb139				0x5d						...
+0x6bb13a				0xd4						...		
+0x6bb13b				0xff						...
+0x6bb13c				0x00						...
+0x6bb13d				0x00						padding
+0x6bb13e				0x00            ...
+0x6bb13f				0x00            ...
+0x6bb140				0x00            ...
+0x6bb141				0x00            ...
+0x6bb142				0x00            ...
+0x6bb143				0x00            ...
+0x6bb144				0x00            ...
+0x6bb145				0x00            ...
+0x6bb146				0x00            ...
+0x6bb147				0x00            ...
+0x6bb148				0x00            ...
+0x6bb149				0x00            ...
+0x6bb14a				0x00            ...
+0x6bb14b				0x00            ...
+0x6bb14c				0x00            ...
+0x6bb14d				0x00            ...
+0x6bb14e				0x00            ...
+0x6bb14f				0x00            ...	
+0x6bb150				0x00            ...
+
+
+-------
+STACK FRAME
+
+Address (hex)		Description      
+
+RSP							buf
+RSP + 1					buf
+RSP + 2					buf
+RSP + 3					buf
+RSP + 4					buf
+RSP + 5					buf
+RSP + 6					buf
+RSP + 7					buf
+RSP + 8					buf
+RSP + 9					buf
+RSP + 10				buf
+RSP + 11				buf
+RSP + 12				buf
+RSP + 13				buf
+RSP + 14				buf
+RSP + 15        buf 
+RSP + 16				buf
+RSP + 17				buf
+RSP + 18				buf
+RSP + 19				buf
+RSP + 20				buf
+RSP + 21				buf
+RSP + 22				buf
+RSP + 23				buf
+RSP + 24				buf
+RSP + 25				buf
+RSP + 26				buf
+RSP + 27				buf
+RSP + 28				buf
+RSP + 29				buf
+RSP + 30				buf
+RSP + 31				buf
+RSP + 32				buf
+RSP + 33				buf
+RSP + 34				buf
+RSP + 35				buf
+RSP + 36				buf
+RSP + 37				buf
+RSP + 38				buf
+RSP + 39				buf
+RSP + 40				buf
+RSP + 41				buf
+RSP + 42				buf
+RSP + 43				buf
+RSP + 44				buf
+RSP + 45				buf
+RSP + 46				buf
+RSP + 47				buf
+
+RSP + 48				%rbx
+RSP + 49				%rbx
+RSP + 50				%rbx
+RSP + 51				%rbx
+RSP + 52				%rbx
+RSP + 53				%rbx
+RSP + 54				%rbx
+RSP + 55				%rbx
+
+RSP + 56				%rbp
+RSP + 57				%rbp
+RSP + 58				%rbp	
+RSP + 59				%rbp
+RSP + 60				%rbp
+RSP + 61				%rbp
+RSP + 62				%rbp
+RSP + 63				%rbp
+
+RSP + 64				%r12
+RSP + 65				%r12
+RSP + 66				%r12
+RSP + 67				%r12
+RSP + 68				%r12
+RSP + 69				%r12
+RSP + 70				%r12
+RSP + 71				%r12
+
+RSP + 72				return address
+RSP + 73				return address
+RSP + 74				return address
+RSP + 75				return address
+RSP + 76				return address
+RSP + 77				return address	
+RSP + 78				return address
+RSP + 79				return address								

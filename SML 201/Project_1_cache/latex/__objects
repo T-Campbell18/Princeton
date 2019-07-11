@@ -1,0 +1,16 @@
+unnamed-chunk-1	dating
+unnamed-chunk-2	
+unnamed-chunk-3	dt
+unnamed-chunk-4	f	m
+unnamed-chunk-5	dating	r.prob
+unnamed-chunk-6	df	female	fperc	ftotal	fyes	i	male	mperc	mtotal	myes	rate	.Random.seed
+unnamed-chunk-7	fiid	fperc	fyes	miid	mperc	myes
+unnamed-chunk-8	allnoF	allnoM	allyesF	allyesM	numFperc	numMperc
+unnamed-chunk-9	a	compl.date	sub
+unnamed-chunk-10	a	ind.exphappy	participants	x
+unnamed-chunk-11	data	gender	length	match	p	partyes	perc.match	perc.partner.yes	perc.yes	sex	x	yes
+unnamed-chunk-12	f	m	temp
+unnamed-chunk-13	m.professed	male1	money
+unnamed-chunk-14	i	m.action	male2	p	pno	pyes	x	y	z
+unnamed-chunk-15	m.action	m.professed
+unnamed-chunk-16	female1	female2	i	m.action	m.professed	money	p	pno	pyes	x	y	z

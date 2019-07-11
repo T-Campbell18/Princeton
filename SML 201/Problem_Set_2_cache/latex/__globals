@@ -1,0 +1,13 @@
+unnamed-chunk-1	loancase	read.csv	dim	class
+unnamed-chunk-2	hist	loancase	funded_amnt
+unnamed-chunk-3	summary	loancase	funded_amnt
+unnamed-chunk-4	IQRrange	IQR	loancase	funded_amnt	min	fivenum	max
+unnamed-chunk-5	boxplot	loancase	funded_amnt	grade
+unnamed-chunk-6	boxplot	loancase	int_rate	grade
+unnamed-chunk-7	reason	table	loancase	purpose	sort	names
+unnamed-chunk-8	purpose	names	reason	freq	as.numeric	df	data.frame	order	grades	sort	unique	as.vector	loancase	grade	m	matrix	rownames	colnames	row	nrow	col	ncol	x	y	n	round
+unnamed-chunk-9	names	sort	m
+unnamed-chunk-10	names	sort	m
+unnamed-chunk-11	names	sort	m
+unnamed-chunk-12	library	png	grid	img	readPNG	grid.raster
+unnamed-chunk-13	library	ggplot2	plot	as.data.frame	t	m	ggplot	aes	grades	geom_line	car	credit_card	debt_consolidation	educational	home_improvement	house	major_purchase	medical	moving	other	renewable_energy	small_business	vacation	wedding	ylab	labs	scale_color_discrete

@@ -1,0 +1,16 @@
+unnamed-chunk-1	dating	read.csv	class	dim
+unnamed-chunk-2	length	unique	dating	wave
+unnamed-chunk-3	length	unique	dating	iid	dt	duplicated	table	gender
+unnamed-chunk-4	f	dt	gender	m	par	c	hist	age
+unnamed-chunk-5	unique	dating	prob	r.prob	round
+unnamed-chunk-6	library	ggplot2	female	dating	gender	male	i	seq	fyes	table	dec_o	r.prob	ftotal	as.vector	myes	mtotal	rate	sort	unique	fperc	round	mperc	df	data.frame	ggplot	aes	geom_line	scale_x_continuous	labs
+unnamed-chunk-7	fiid	as.vector	table	female	iid	fyes	dec	fperc	round	miid	male	myes	mperc	par	c	hist
+unnamed-chunk-8	summary	fperc	mperc	numMperc	as.vector	table	numFperc	allnoM	allyesM	length	allnoF	allyesF	round
+unnamed-chunk-9	sub	subset	dating	c	compl.date	na.omit	a	dim	round
+unnamed-chunk-10	participants	unique	compl.date	iid	ind.exphappy	c	x	a	exphappy	var	print	append	mean
+unnamed-chunk-11	library	GGally	sex	c	perc.yes	perc.partner.yes	perc.match	x	participants	p	compl.date	iid	length	dim	yes	sum	dec	partyes	dec_o	match	append	gender	round	factor	data	data.frame	ind.exphappy	ggpairs	aes
+unnamed-chunk-12	temp	subset	dating	c	m	gender	f
+unnamed-chunk-13	male1	subset	m	c	money	duplicated	iid	gender	m.professed	as.matrix
+unnamed-chunk-14	male2	subset	m	c	m.action	matrix	i	x	unique	iid	p	pyes	dec	pno	y	z	mean
+unnamed-chunk-15	colnames	m.professed	c	m.action	boxplot
+unnamed-chunk-16	female1	subset	f	c	money	duplicated	iid	gender	m.professed	as.matrix	female2	m.action	matrix	i	x	unique	p	pyes	dec	pno	y	z	mean	colnames	boxplot

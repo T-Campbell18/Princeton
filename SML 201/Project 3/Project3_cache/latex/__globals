@@ -1,0 +1,21 @@
+unnamed-chunk-1	house	read.csv	dim
+unnamed-chunk-2	house	bedrooms	bathrooms	library	ggplot2	GGally	ggpairs	c	list	wrap	theme	element_text
+unnamed-chunk-3	house	bedrooms	sqft_living	dim
+unnamed-chunk-4	library	dplyr	vs.grade	house	%>%	group_by	grade	summarise	mean	price	vs.bathrooms	bathrooms	vs.yr_built	yr_built	plot
+unnamed-chunk-5	house	mutate	log	price	ggpairs	c	list	wrap	theme	element_text
+unnamed-chunk-6	vs.grade2	house	%>%	group_by	grade	summarise	mean	log.price	vs.bathrooms2	bathrooms	plot
+unnamed-chunk-7	newy	house	yr_built	vs.yr_built2	%>%	mutate	group_by	new.yr.built	summarise	mean	log.price	plot
+unnamed-chunk-8	vs.floors	house	%>%	group_by	floors	summarise	mean	log.price	vs.condition	condition	plot
+unnamed-chunk-9	boxplot	house	log.price	factor	zipcode
+unnamed-chunk-10	pmodel	summary	lm	log.price	factor	zipcode	house
+unnamed-chunk-11	p.v	pmodel	coefficients	alpha	sum	m	length	cutoff	sort.p	sort	max
+unnamed-chunk-12	renovated	house	yr_renovated	mod.variables	%>%	select	mutate	as.factor	waterfront	floors	condition	yr_built	zipcode
+unnamed-chunk-13	date.format	format	as.Date	mod.variables	date	length	head	dim
+unnamed-chunk-14	test2	mod.variables	date.format	%in%	names	c	dim
+unnamed-chunk-15	tmp	mod.variables	date.format	%in%	names	c	s	dim	set.seed	permu	sample	train.val	round	test1
+unnamed-chunk-16	v.errors1	matrix	list	paste	v.errors2
+unnamed-chunk-17	library	leaps	k	set.seed	folds	sample	nrow	train.val	predict.reg	form	as.formula	object	call	mat	model.matrix	newdata	coefi	coef	id	xvars	names	%*%	j	best_fit_f	regsubsets	log.price	.	f.waterfront	sqft_living	best_fit_b	i	pred1	pred2	v.errors1	mean	v.errors2	mean.v.errors1	apply	mean.v.errors2	print	c	min	which.min	min1	min2	plot	par	T	points	legend
+unnamed-chunk-18	bestf	regsubsets	log.price	.	f.waterfront	sqft_living	train.val	bestb	mat1	model.matrix	mat2	coefi1	coef	coefi2	setequal	names
+unnamed-chunk-19	tmp	regsubsets	log.price	.	f.waterfront	sqft_living	train.val	T	plot	summary	bic	adjr2	cp
+unnamed-chunk-20	pred_x	predict.reg	bestf	test1	plot	log.price	abline	qqplot	hist
+unnamed-chunk-21	pred_x_in	predict.reg	bestf	test1	mse_in	mean	log.price	pred_x_out	test2	mse_out

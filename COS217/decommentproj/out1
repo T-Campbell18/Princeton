@@ -1,0 +1,194 @@
+ 
+ 
+ 
+ 
+ 
+ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+ 
+typedef enum {NORMAL, SLASH, STRING, CHAR, COMMENT, STAR, 
+  STRINGESCAPE, CHARESCAPE} State;
+
+ 
+
+  
+static int normal(int c, int *line)
+{
+  if (c == '/')
+    return SLASH;
+  putchar(c);
+  if (c == '\n')
+    ++*line;
+  if (c == '"')
+    return STRING;
+  if (c == '\'')
+    return CHAR;
+  return NORMAL;  
+}
+
+ 
+
+
+
+static int slash(int c, int *last, int line)
+{
+  if (c == '*')
+  {
+    *last = line;
+    putchar(' ');
+    return COMMENT;
+  }
+  if (c == '/')
+  {
+    putchar('/');
+    return SLASH;
+  }
+  putchar('/');
+  putchar(c);
+  if (c == '"')
+    return STRING;
+  if (c == '\'')
+    return CHAR;
+  return NORMAL;
+}
+
+ 
+
+
+static int stringlit(int c, int *line)
+{
+  putchar(c);
+  if (c == '\n')
+    ++*line;
+  if (c == '"')
+    return NORMAL;
+  if (c == '\\') 
+    return STRINGESCAPE;
+  return STRING;  
+}
+
+ 
+
+
+static int charlit(int c, int *line)
+{
+  putchar(c);
+  if (c == '\n')
+    ++*line;
+  if ('\'' == c)
+    return NORMAL;
+  if (c == '\\') 
+    return CHARESCAPE;
+  return CHAR;  
+}
+
+ 
+
+
+
+static int escape(int c, State s)
+{
+  putchar(c);
+  if (s == CHARESCAPE)
+    return CHAR;
+  return STRING;  
+    
+}
+
+ 
+
+
+
+static int comment(int c, int *line)
+{
+  if (c == '\n')
+  {
+    putchar(c);
+    ++*line;
+  }
+  if (c == '*')
+    return STAR;
+  return COMMENT;  
+}
+
+ 
+
+
+
+static int star(int c, int *line)
+{
+  if (c == '\n')
+  {
+    putchar(c);
+    ++*line;
+  }
+  if (c == '/')
+    return NORMAL;
+  else if (c == '*')
+    return STAR;
+  else  
+    return COMMENT; 
+}
+
+ 
+
+
+int main(void) 
+{
+  int c;
+   
+  int line = 1;
+   
+  int last = -1;
+  State state = NORMAL;
+  
+  while ((c = getchar()) != EOF)
+  {
+    switch (state) 
+    {
+      case NORMAL: 
+        state = normal(c, &line);
+        break;
+        
+      case STRING:
+        state = stringlit(c, &line);
+        break;
+        
+      case CHAR:
+        state = charlit(c, &line);
+        break;  
+      
+      case STRINGESCAPE:
+        state = escape(c, STRINGESCAPE);
+        break;
+        
+      case CHARESCAPE:
+        state = escape(c, CHARESCAPE);
+        break;  
+      
+      case SLASH: 
+        state = slash(c, &last, line); 
+        break;
+        
+      case COMMENT: 
+        state = comment(c, &line);
+        break;
+        
+      case STAR: 
+        state = star(c, &line); 
+        break;
+    }
+  }
+  if (state == SLASH)
+    putchar('/');
+  if (state == COMMENT || state == STAR)
+  {
+    assert(last >= 0);
+    fprintf(stderr, "Error: line %d: unterminated comment\n", last);
+    return EXIT_FAILURE;
+  }
+  return EXIT_SUCCESS;
+}

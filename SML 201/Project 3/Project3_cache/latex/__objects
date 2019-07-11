@@ -1,0 +1,21 @@
+unnamed-chunk-1	house
+unnamed-chunk-2	house	.Random.seed
+unnamed-chunk-3	
+unnamed-chunk-4	vs.bathrooms	vs.grade	vs.yr_built
+unnamed-chunk-5	house
+unnamed-chunk-6	vs.bathrooms2	vs.grade2
+unnamed-chunk-7	newy	vs.yr_built2
+unnamed-chunk-8	vs.condition	vs.floors
+unnamed-chunk-9	
+unnamed-chunk-10	pmodel
+unnamed-chunk-11	alpha	cutoff	m	p.v	sort.p
+unnamed-chunk-12	mod.variables	renovated
+unnamed-chunk-13	date.format
+unnamed-chunk-14	test2
+unnamed-chunk-15	permu	s	test1	tmp	train.val
+unnamed-chunk-16	v.errors1	v.errors2
+unnamed-chunk-17	best_fit_b	best_fit_f	folds	i	j	k	mean.v.errors1	mean.v.errors2	min1	min2	pred1	pred2	predict.reg	v.errors1	v.errors2
+unnamed-chunk-18	bestb	bestf	coefi1	coefi2	mat1	mat2
+unnamed-chunk-19	tmp
+unnamed-chunk-20	pred_x
+unnamed-chunk-21	mse_in	mse_out	pred_x_in	pred_x_out

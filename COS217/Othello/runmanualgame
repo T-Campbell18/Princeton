@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#-----------------------------------------------------------------------
+# runmanualgame
+# Script to facilitate running the manual player with the player named
+# player_Beatrice as the player making the first move. 
+# Feel free to edit the script to run it with any player
+# program provided in the assignment.
+# Author: Iasonas Petras
+#-----------------------------------------------------------------------
+
+if [ -f "player_Beatrice_vs_playermanual" ]; then
+	rm player_Beatrice_vs_playermanual
+fi
+
+touch player_Beatrice_vs_playermanual
+
+tail -f player_Beatrice_vs_playermanual & 
+./samplereferee -tracking player_Beatrice playermanual
+
+#Wait for 5 seconds to display output on terminal
+sleep 5
+
+#Kill the tail process that observes the game record file 
+ps -ef | grep "[t]ail" | grep 'player_Beatrice_vs_playermanual' | tr -s ' ' | cut -d' ' -f2 | xargs kill

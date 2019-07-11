@@ -1,0 +1,9 @@
+unnamed-chunk-1	library	class	possum	sapply	dim
+unnamed-chunk-2	perc	table	possum	sex	length	percf	round
+unnamed-chunk-3	victoria	possum	Pop	perc	table	sex	length	round	other
+unnamed-chunk-4	p	sum	dbinom	percf	pbinom
+unnamed-chunk-5	sum	dbinom	p	pbinom
+unnamed-chunk-6	set.seed	fm	as.numeric	possum	sex	m	tmean	sapply	mean	sample	T	sum
+unnamed-chunk-7	headlength	possum	hdlngth	m	mean	s	sd	min	max	count	length
+unnamed-chunk-8	p	mean	headlength	c	qt	length	sd	sqrt
+unnamed-chunk-9	make.CI	ci	mean	input.vector	c	qt	percent.conf	length	sd	sqrt	print	possum	hdlngth	totlngth	taill

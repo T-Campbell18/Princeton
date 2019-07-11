@@ -1,0 +1,10 @@
+unnamed-chunk-1	load	library	dplyr	poll.oct2016	oct_poll	%>%	group_by	state	mutate	rawpoll_trump	samplesize	rawpoll_clinton	summarise	sum	A	B
+unnamed-chunk-2	true.perc	read.csv	election	merge	poll.oct2016	mutate	rawpoll_trump	rawpoll_clinton	trump.vote	clinton.vote	poll.diff	vote.diff	dim
+unnamed-chunk-3	std.unit	rep	significant	T	x	n	election	samplesize	t	rawpoll_trump	c	rawpoll_clinton	i	round	append	SE	sd	sqrt	poll.diff	vote.diff	between	t.test	conf.int	same.sign	sign	mutate
+unnamed-chunk-4	length	significant	T	a	rep	same.sign
+unnamed-chunk-5	length	significant	F	a	rep	same.sign	T
+unnamed-chunk-6	a	significant	rep	T	same.sign	F	election
+unnamed-chunk-7	hist	election	std.unit	abline
+unnamed-chunk-8	num	length	election	deviation	sum	dbinom
+unnamed-chunk-9	dem	select	read.csv	area_name	RHI825214	EDU685213	election.dem	merge	election
+unnamed-chunk-10	plot	election.dem	std.unit	RHI825214	EDU685213

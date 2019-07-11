@@ -1,0 +1,37 @@
+Normal (accept)
+	/: SLASH
+	": STRING
+	': CHAR
+	other: NORMAL
+
+SLASH (accept)
+	*: COMMENT
+	/: SLASH
+	": STRING
+	': CHAR
+	other: NORMAL
+
+COMMENT (reject)
+	*: STAR
+	other: COMMENT
+
+STAR (reject)
+	/: NORMAL
+	*: STAR
+	other: COMMENT
+
+STRING (accept)
+	": NORMAL
+	\: STRINGESCAPE
+	other: STRING
+
+STRINGESCAPE (accept)
+	other: STRING
+
+CHAR (accept)
+	': NORMAL
+	\: CHARESCAPE
+	other: CHAR
+
+C_ESCAPE (accept)
+	other: CHAR

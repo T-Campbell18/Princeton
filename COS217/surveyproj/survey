@@ -1,0 +1,70 @@
+Student's username
+tylercc
+Concentration
+Computer Science
+Degree
+BSE
+Academic Year of Graduation
+2020
+Binary number system
+5
+Hexadecimal number system
+5
+Representation of signed integers (two's complement notation)
+1
+Topic 2: Unix Operating System, in general
+2
+Fundamental commands (cd, ls, cat, etc.)
+3
+Redirection (< and >) and pipes ( | )
+4
+Background processes via Ctrl-z
+2
+Topic 3: GNU programming environment, in general
+2
+The emacs editor
+0
+The gcc compiler driver
+1
+The gdb debugger
+1
+The make project maintenance tool
+1
+Topic 4: Java programming language, in general
+5
+Java Control structures (if, switch, for, while, do, break)
+5
+Methods
+5
+Java Arrays
+5
+Classes
+5
+Topic 5: C programming language, in general
+3
+C Control structures (if, switch, for, while, do, break)
+2
+Functions
+2
+C Arrays
+2
+Structures
+2
+Preprocessor directives (#include, #define, etc.)
+1
+Interface (.h) files
+0
+Pointers and pointer operators (* and &)
+1
+Dynamic memory mgmt. (malloc, calloc, realloc, free)
+0
+Void pointers
+0
+Function pointers
+0
+Abstract data types (ADTs)
+3
+Topic 6: x86-64 architecture
+0
+Topic 7: x86-64 assembly language
+0
