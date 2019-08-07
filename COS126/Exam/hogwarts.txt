@@ -1,0 +1,5 @@
+Snape McGonagall
+Gryffindor  17 201 623
+Hufflepuff  14 400 400
+Ravenclaw   11 341 205
+Slytherin   15 865   0

@@ -1,0 +1,45 @@
+program decode.toy
+ /*******************************************************************************
+  *  Name: Tyler Campbell
+  *  NetID: tylercc 
+  *  Precept: P02
+  *
+  * Description:  This TOY program, corrects a Hamming encoded message by 
+  * reading 7 bits (m1, m2, m3, m4, p1, p2, p3) from TOY standard input and
+  * writes 4 bits to TOY standard output. Stops upon reading FFFF from standard
+  * input. Corrects any corrupted code by checking parity 
+  *
+  ******************************************************************************/
+
+10: 81FF   read R[1]                     read from standard input
+11: 2301   R[3] <- -R[1]                 check to to if FFFF has been reached
+12: D32F   if (R[3] > 0) goto 2F         goto halt
+13: 82FF   read R[2]                     read from standard input
+14: 83FF   read R[3]
+15: 84FF   read R[4]
+16: 85FF   read R[5] 
+17: 86FF   read R[6]
+18: 87FF   read R[7]
+19: 4A34   R[A] <- R[3] ^ R[4]           compute parity check
+1A: 4B24   R[B] <- R[2] ^ R[4]           
+1B: 4551   R[5] <- R[5] ^ R[1]           
+1C: 4661   R[6] <- R[6] ^ R[1]           
+1D: 4772   R[7] <- R[7] ^ R[2]           
+1E: 455B   R[5] <- R[5] ^ R[B]           
+1F: 466A   R[6] <- R[6] ^ R[A]           
+20: 477A   R[7] <- R[7] ^ R[A]
+21: 3F56   R[F] <- R[5] & R[6]           filp corrupted bits (if necessary)
+22: 3AF7   R[A] <- R[F] & R[7]           
+23: 444A   R[4] <- R[4] ^ R[A] 
+24: DA2A   if (R[A] > 0) goto 2A         goto writing         
+25: 411F   R[1] <- R[1] ^ R[F]
+26: 3A57   R[A] <- R[5] & R[7]           
+27: 422A   R[2] <- R[2] ^ R[A]           
+28: 3A67   R[A] <- R[6] & R[7]           
+29: 433A   R[3] <- R[3] ^ R[A]
+2A: 91FF   write R[1]                    write to standard output
+2B: 92FF   write R[2]                    
+2C: 93FF   write R[3]                    
+2D: 94FF   write R[4]                    
+2E: C010   goto 10                      
+2F: 0000   halt 

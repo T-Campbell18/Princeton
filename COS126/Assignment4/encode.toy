@@ -1,0 +1,35 @@
+program encode.toy
+/*******************************************************************************
+ *  Name: Tyler Campbell
+ *  NetID: tylercc 
+ *  Precept: P02
+ *
+ * Description:  This TOY program, encodes a binary message by reading
+ * 4 bits (m1,m2,m3,m4) from TOY standard input, and writes the 7 bits (m1, 
+ * m2, m3, m4, p1, p2, p3) to TOY standard output. Stops upon reading 
+ * FFFF from standard input.
+ *
+ ******************************************************************************/
+
+
+10: 8AFF   read R[A]                     read from standard input
+11: 230A   R[3] <- -R[A]                 check if FFFF has been reached
+12: D324   if (R[3] > 0) goto 24         
+13: 8BFF   read R[B]                     
+14: 8CFF   read R[C]                     
+15: 8DFF   read R[D]                     
+16: 4EAB   R[E] <- R[A] ^ R[B]           compute p1,p2,p3
+17: 4EED   R[E] <- R[E] ^ R[D]           
+18: 4FAC   R[F] <- R[A] ^ R[C]           
+19: 4FFD   R[F] <- R[F] ^ R[D]           
+1A: 49BC   R[9] <- R[B] ^ R[C]           
+1B: 499D   R[9] <- R[9] ^ R[D]           
+1C: 9AFF   write R[A]                    write all bits to standard output
+1D: 9BFF   write R[B]                    
+1E: 9CFF   write R[C]                    
+1F: 9DFF   write R[D]                    
+20: 9EFF   write R[E]                    
+21: 9FFF   write R[F]                    
+22: 99FF   write R[9]                    
+23: C010   goto 10
+24: 0000   halt                          
