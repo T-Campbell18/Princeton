@@ -1,5 +1,5 @@
 # Princeton
-Course Work from Princeton Computer Science - Class 2020
+Course Work from Princeton Computer Science - Class of 2020
 
 COS 126 - Computer Science: An Interdisciplinary Approach - https://www.cs.princeton.edu/courses/archive/fall16/cos126/
 
