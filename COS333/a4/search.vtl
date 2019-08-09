@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registrar's Office Class Search</title>
+</head>
+<body>
+   <h1>Registrar's Office</h1>
+   #if (${errorMsg})
+      ${errorMsg}
+
+   #else
+   <h2>Class Search</h2>
+   <hr>
+
+   <form action="searchClasses" method="get">
+      <table>
+         <tr>
+         <td>Dept:</td>
+         <td><input type="text" name="dept"value = ${dept}><br></td>
+         </tr>
+
+         <tr>
+         <td>Course Num:</td>
+         <td>
+            <input type="text" name="num" value =${num}><br>
+         </td>
+         </tr>
+
+         <tr>
+         <td>Area:</td>
+         <td><input type="text" name=area value =${area}><br></td>
+         </tr>
+
+         <tr>
+         <td>Title:</td>
+         <td>
+            <input type="text" name="title" value =${title}><br>
+         </td>
+         </tr>
+
+         <tr>
+         <td></td>
+         <td><input type="submit"></td>
+         </tr>
+
+      </table>
+   </form>
+
+   <hr>
+
+   <table>
+      <tr>
+         <th align="left">ClassId</th>
+         <th align="left">Dept</th>
+         <th align="left">Num</th>
+         <th align="left">Area</th>
+         <th align="left">Title</th>
+      </tr>
+      #foreach (${class} in ${classes})
+      <tr>
+        <td><a href="classInfo?classid=${class.getId()}" >${class.getId()}</a></td>
+        <td>${class.getDept()}</td>
+        <td>${class.getNum()}</td>
+        <td>${class.getArea()}</td>
+        <td>${class.getTitle()}</td>
+      </tr>
+      #end
+
+   </table>
+    #end
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>Registrar's Office Class Search</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+    body {font-family: "Lucida Sans Unicode", sans-serif}
+    </style>
+
+   <body onLoad="document.getElementById('Dept').focus(); searchClasses()"
+    class="w3-pale-blue">
+
+
+         <center>
+            <h1 class="w3-card  w3-blue w3-center w3-padding-large
+			w3-text-dark-gray">
+			Registrar's Office: Class Search</h1>
+         </center>
+			<div class="w3-padding-large">
+               <input type="text"
+                  placeholder="Department"
+                  name="dept" id="Dept"
+                  oninput="searchClasses()" autocomplete="off"
+				  class="w3-sand w3-padding-small">
+
+
+               <input  type="text"
+                  placeholder="Course Number"
+                  name="coursenum" id="Coursenum"
+                  oninput="searchClasses()" autocomplete="off"
+				  class="w3-sand w3-padding-small">
+
+
+               <input  type="text"
+                  placeholder="Area"
+                  name="area" id="Area"
+                  oninput="searchClasses()" autocomplete="off"
+				  class="w3-sand w3-padding-small">
+
+
+               <input type="text"
+                  placeholder="Title"
+                  name="title" id="Title"
+                  oninput="searchClasses()" autocomplete="off"
+				  class="w3-sand w3-padding-small">
+
+			</div>
+         <br>
+
+
+      <div>
+         <p id="ResultsArea"></p>
+      </div>
+
+
+      <script>
+
+         var date = new Date();
+         var seed = date.getSeconds();
+         var request = null;
+
+         function createAjaxRequest()  // From Nixon book
+         {
+            var req;
+
+            try  // Some browser other than Internet Explorer
+            {
+               req = new XMLHttpRequest();
+            }
+            catch (e1)
+            {
+               try  // Internet Explorer 6+
+               {
+                  req = new ActiveXObject("Msxml2.XMLHTTP");
+               }
+               catch (e2)
+               {
+                  try  // Internet Explorer 5
+                  {
+                     req = new ActiveXObject("Microsoft.XMLHTTP");
+                  }
+                  catch (e3)
+                  {
+                     req = false;
+                  }
+               }
+            }
+            return req;
+         }
+
+         function processReadyStateChange()
+         {
+            var STATE_UNINITIALIZED = 0;
+            var STATE_LOADING       = 1;
+            var STATE_LOADED        = 2;
+            var STATE_INTERACTIVE   = 3;
+            var STATE_COMPLETED     = 4;
+
+            if (this.readyState != STATE_COMPLETED)
+               return;
+
+            if (this.status != 200)         // Request succeeded?
+            {
+               //alert("AJAX error: Request failed: " +
+               //   this.statusText);
+               return;
+            }
+
+            if (this.responseText == null)  // Data received?
+            {
+               alert("AJAX error: No data received");
+               return;
+            }
+            var resultsArea = document.getElementById('ResultsArea');
+            resultsArea.innerHTML = this.responseText;
+         }
+
+         function searchClasses()
+         {
+            var dept = document.getElementById('Dept').value;
+            var coursenum = document.getElementById('Coursenum').value;
+            var area = document.getElementById('Area').value;
+            var title = document.getElementById('Title').value;
+
+            dept = encodeURIComponent(dept);
+            coursenum = encodeURIComponent(coursenum);
+            area = encodeURIComponent(area);
+            title = encodeURIComponent(title);
+            var url = "/searchClasses?" + "dept=" + dept + "&coursenum=" + coursenum +
+               "&area=" + area + "&title=" + title;
+            var messageId = Math.floor(Math.random(seed) * 1000000) + 1;
+
+            if (request != null)
+               request.abort();
+
+            request = createAjaxRequest();
+            if (! request)
+            {
+               alert("AJAX error: Your browser doesn't support AJAX");
+               return;
+            }
+
+            request.onreadystatechange = processReadyStateChange;
+
+            request.open("GET",url);
+            request.send(null);
+         }
+
+      </script>
+   </body>
+</html>

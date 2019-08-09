@@ -1,0 +1,14 @@
+tylercc Jritossa 
+Assignment 3
+
+Joel:
+Joel created the two vtl files: classinfo and search. He also reviewed and tested the 
+new Web.java program, as well as the other java files.
+
+Tyler: 
+Created the all the java files. First the classes to reprsent a course and a class. Then
+using the Spark framework create the html code. Then using the vtl files from Joel linked the 2
+modifyng the files as needed. Then worked on handling errors and fixing bugs with the code. I spent 
+around 3 hours on the assignment to start and an addtional 1 to fix bugs. This assignment was very
+helpful as having no prior experience with back end development. The understanding of spark framework
+will help with my project as well. 

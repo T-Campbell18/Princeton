@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Registrar's Office Class Details</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Lucida Sans Unicode", sans-serif}
+</style>
+
+</head>
+<body class="w3-pale-blue">
+   <h1 class="w3-card  w3-blue w3-center w3-padding-large w3-text-dark-gray">
+   Registrar's Office: Class Info</h1>
+   #if (${errorMsg})
+      ${errorMsg}
+
+
+   #else
+  <div class="w3-card w3-padding-large">
+   <h2>Class Details (class id ${course.getClassID()})</h2>
+
+   <strong>Course Id: </strong> ${course.getCourseID()}<br>
+   <strong>Days: </strong>${course.getDays()}<br>
+   <strong>Start time: </strong>${course.getStart()}<br>
+   <strong>End time: </strong>${course.getEnd()}<br>
+   <strong>Building: </strong>${course.getBldg()}<br>
+   <strong>Room: </strong>${course.getRoomnum()}<br>
+  </div>
+
+  <div class="w3-card w3-padding-large">
+   <h2>Course Details (course id ${course.getCourseID()})</h2>
+      #foreach (${c} in ${course.getCode()})
+       <strong>Dept and Number: </strong> ${c}<br>
+      #end
+   <strong>Area: </strong>${course.getArea()}<br>
+   <strong>Title: </strong>${course.getTitle()}<br>
+   <strong>Description: </strong>${course.getDescrip()}<br>
+   <strong>Prerequisites: </strong>${course.getPrereqs()}<br>
+   <strong>Professor(s): </strong> ${course.getProfs()}
+
+   #end
+  </div>
+</body>
+</html>

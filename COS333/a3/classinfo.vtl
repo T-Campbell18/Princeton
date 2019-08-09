@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registrar's Office Class Details</title>
+</head>
+
+<body>
+  <h1>Registrar's Office</h1>
+  #if (${errorMsg})
+    ${errorMsg}
+
+  #else
+
+  <hr>
+
+  <h2>Class Details for Class Id: ${course.getClassID()})</h2>
+
+  <strong>Course Id:&nbsp</strong> ${course.getCourseID()}<br>
+  <strong>Days: </strong>${course.getDays()}<br>
+  <strong>Start time: </strong>${course.getStart()}<br>
+  <strong>End time: </strong>${course.getEnd()}<br>
+  <strong>Building: </strong>${course.getBldg()}<br>
+  <strong>Room: </strong>${course.getRoomnum()}<br>
+
+  <hr>
+
+  <h2>Course Details for Course Id: ${course.getID()}</h2>
+    #foreach (${c} in ${course.getCode()})
+      <strong>Dept and Num:  </strong>${c}<br>
+    #end
+  <strong>Area: </strong>${course.getArea()}<br>
+  <strong>Title: </strong>${course.getTitle()}<br>
+  <strong>Description: </strong>${course.getDescrip()}<br>
+  <strong>Prerequisites: </strong>${course.getPrereqs()}<br>
+  <strong>Professor(s): </strong> ${course.getProfs()}
+
+  <hr>
+
+  <p>Click here to do <a href="searchClasses?dept=${prevDept}&coursenum=${prevNum}&area=${prevArea}&title=${prevTitle}">another class search</a></p>
+     #end
+</body>
+</html>
